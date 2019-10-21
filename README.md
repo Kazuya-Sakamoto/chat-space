@@ -7,32 +7,36 @@
 |password|string|null: false|
 ### Asociation
 - has_many :messages
-- has_many :groups, through:group_user 
+- has_many :groups, through: :group_users
+- has_many :group_users
+
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|text|text|
 |image|string|
-|user_id|integer|null: false, foregin_key :true|
-|group|id|integer|null:false, foregin_key :true|
+|user_id|refrences|null: false, foregin_key :true|
+|group|id|refrences|null: false, foregin_key :true|
 ### Asociation
-- belong_to: users
-- belong_to: groups
+- belong_to: user
+- belong_to: group
+
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 ### Asociation
-- has_many :users, through: group_user
+- has_many :users, through: :group_users
 - has_many :messages
+- has_many :group_users
 
 ## group_userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foregin_key :true|
-|group|id|integer|null:false, foregin_key :true|
+|user_id|refrences|null: false, foregin_key :true|
+|group|id|refrences|null:false, foregin_key :true|
 ### Asociation
-- belong_to :users
-- belong_to :groups
+- belong_to :user
+- belong_to :group
