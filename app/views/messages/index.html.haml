@@ -1,0 +1,58 @@
+.wrapper
+  
+  .chat-side
+    .side-header
+      .side-header__box
+        sample+
+        %a
+          %i.fa.fa-edit
+        %a
+          %i.fa.fa-cog
+          %p.side-header__box__user-name
+        
+    .groups
+      .group
+        %p.group__name
+          sam
+          %p.group__latest-message
+            same
+
+  .chat-main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group
+          samama
+        %ul.main-header__left-box__member-list
+          Member:
+          %li.main-header__left-box__member-list__member
+            tetete
+      %a
+        .main-header__edit-btn
+          EDIT
+        
+
+    .messages
+      .message
+        .message__upper-info
+          %p.message__upper-info__taker
+            kazuya
+          %p.message__upper-info__date
+            2020年1/24
+        %p.message__text
+          muzukasii
+    .form
+      %form#new_message.new_message
+        .input-box
+          %input#message_content.input-box__text{placeholder: "type a message", name: "message[content]", type: "text"}
+          %label.input-box__image
+            %i.fa.fa-image
+        %input.submit-btn{type: "submit", name: "commit", value: "Send"}
+      
+
+
+
+
+
+   
+
+
