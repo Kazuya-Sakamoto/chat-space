@@ -29,9 +29,13 @@ html {
       line-height: 100px;
     
       &__box{
-          height: 24px;
+          height: 100px;
           font-size:16px;
           color: white;
+          a{
+            float: right;
+            padding-left: 4px;
+          }
       }
     }
     .groups{
