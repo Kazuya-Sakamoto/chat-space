@@ -14,16 +14,19 @@
           
         
     .groups
-      .group
-        %p.group__name
-          グループ名
-          %p.group__latest-message
-            新着メッセージ
-      .group
-        %p.group__name
-          グループ名
-          %p.group__latest-message
-            新着メッセージ
+      - current_user.groups.each do |group|
+        .group
+          = link_to '#' do
+            .group__name
+              = group.name
+            .group__latest-message
+              メッセージはまだありません。
+        .group
+          = link_to '#' do
+            .group__name
+              = group.name
+            .group__latest-message
+              メッセージはまだありません。
 
   .chat-main
     .main-header
@@ -55,12 +58,3 @@
           %label.input-box__image
             %i.fa.fa-image
         %input.submit-btn{type: "submit", name: "commit", value: "Send"}
-      
-
-
-
-
-
-   
-
-
