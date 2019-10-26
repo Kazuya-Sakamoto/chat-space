@@ -38,7 +38,8 @@ html {
           color: white;
           a{
             float: right;
-            padding-left: 7px
+            padding-left: 7px;
+            color: #FFFFFF;
           }
       }
     }
@@ -55,17 +56,23 @@ html {
         color: white;
         padding: 20px 0;
         //background-color: blueviolet;
+
+        a{
+          text-decoration: none;
+          color: #FFFFFF;
+          font-weight: bold; 
+        }
       
         &__name{
           font-size: 15px;
           margin: 0 0 5px;
           font-weight: bold;    
         }
-          &__latest-message{
+        &__latest-message{
             font-size: 11px;
             padding-top: 15px;
             font-weight: bold;
-          }
+        }
       }
     }  
   }
