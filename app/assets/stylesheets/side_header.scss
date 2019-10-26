@@ -1,4 +1,4 @@
-.side-bar {
+.side-header {
     box-sizing: border-box;
     color: $white;
     width: 300px;
@@ -35,7 +35,7 @@
             color: $white;
             font-size: $side_group_name;
           }
-          &__message {
+          &__latest-message {
             color: $white;
             font-size: $side_group_message;
             margin-top: 5px;
