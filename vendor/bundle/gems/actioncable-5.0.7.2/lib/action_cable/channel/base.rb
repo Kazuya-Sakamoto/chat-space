@@ -88,7 +88,7 @@ module ActionCable
     #   end
     #
     # In this example, the subscription will be rejected if the
-    # <tt>current_user</tt> does not have access to the chat room. On the
+    # <tt></tt> does not have access to the chat room. On the
     # client-side, the <tt>Channel#rejected</tt> callback will get invoked when
     # the server rejects the subscription request.
     class Base
