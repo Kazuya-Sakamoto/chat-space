@@ -16,13 +16,7 @@
     .groups
       - current_user.groups.each do |group|
         .group
-          = link_to '#' do
-            .group__name
-              = group.name
-            .group__latest-message
-              メッセージはまだありません。
-        .group
-          = link_to '#' do
+          = link_to group_messages_path(group) do
             .group__name
               = group.name
             .group__latest-message
@@ -39,22 +33,16 @@
             tetete
       %a
         .main-header__edit-btn
-          EDIT
-        
-
+          = link_to "Edit", edit_group_path(@group)
+            
     .messages
-      .message
-        .message__upper-info
-          %p.message__upper-info__taker
-            kazuya
-          %p.message__upper-info__date
-            2020年1/24
-        %p.message__text
-          muzukasii
+      = render @messages
+        
     .form
-      %form#new_message.new_message
-        .input-box
-          %input#message_content.input-box__text{placeholder: "type a message", name: "message[content]", type: "text"}
-          %label.input-box__image
-            %i.fa.fa-image
-        %input.submit-btn{type: "submit", name: "commit", value: "Send"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
