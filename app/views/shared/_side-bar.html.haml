@@ -17,6 +17,6 @@
         = link_to group_messages_path(group) do
           .group__name
             = group.name
-          .group__latest-message
-            メッセージはまだありません。
+          .group__message
+            = group.show_last_message
         
