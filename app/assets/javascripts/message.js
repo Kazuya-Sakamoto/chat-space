@@ -1,5 +1,6 @@
 $(function(){
     function buildmessage(message){
+        var img = message.image ? `<img class="lower-message__image" src="${message.image}" alt="Dsc01746 2">`: '';
         var html = `<div class="message">
                         ${message.content}
                         <div class="upper-message__user-name">
@@ -8,7 +9,7 @@ $(function(){
                         <div class="upper-message__date">
                         ${message.date}
                         </div>
-                        <img class="lower-message__image" src="${message.image}" alt="Dsc01746 2">
+                        ${img}
                     </div>`
         return html;
     }
@@ -30,12 +31,18 @@ $(function(){
             $('.messages').append(html)
             $('#new_message')[0].reset();
             $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+            $('.lower-message__image').empty();
+            // if (message.image !== false){
+            //     message.forEach(function(message){
+            //     appendMassage(message);
+            //     });
+            // }
         })
         .fail(function(){
             alert('error');
         })
         .always(function(data){
-            $('.form__submit').prop('disabled', false);　//ここで解除している
+            $('.form__submit').prop('disabled', false);
         })
     })
 })
