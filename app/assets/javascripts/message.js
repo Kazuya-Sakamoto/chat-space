@@ -2,6 +2,13 @@ $(function(){
     function buildmessage(message){
         var html = `<div class="message">
                         ${message.content}
+                        <div class="upper-message__user-name">
+                        ${message.user_name}
+                        </div>
+                        <div class="upper-message__date">
+                        ${message.date}
+                        </div>
+                        <img class="lower-message__image" src="${message.image}" alt="Dsc01746 2">
                     </div>`
         return html;
     }
@@ -21,7 +28,8 @@ $(function(){
         .done(function(message){
             var html = buildmessage(message);
             $('.messages').append(html)
-            $('#message_content').val('')
+            $('#new_message')[0].reset();
+            $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
         })
         .fail(function(){
             alert('error');
