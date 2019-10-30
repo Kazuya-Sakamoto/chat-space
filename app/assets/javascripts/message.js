@@ -32,11 +32,6 @@ $(function(){
             $('#new_message')[0].reset();
             $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
             $('.lower-message__image').empty();
-            // if (message.image !== false){
-            //     message.forEach(function(message){
-            //     appendMassage(message);
-            //     });
-            // }
         })
         .fail(function(){
             alert('error');
