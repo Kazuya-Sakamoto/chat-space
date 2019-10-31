@@ -5,11 +5,12 @@
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group
-          samama
+          = @group.name
         %ul.main-header__left-box__member-list
           Member:
           %li.main-header__left-box__member-list__member
-            tetete
+            - @group.users.each do |member|
+              = member.name
       %a
         .main-header__edit-btn
           = link_to "Edit", edit_group_path(@group)

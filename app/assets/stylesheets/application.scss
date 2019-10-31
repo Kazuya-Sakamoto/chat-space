@@ -89,12 +89,11 @@ html {
       border-bottom: solid 1px #eeeeee;
       //background-color: blueviolet;
       &__left-box {
-        display: inline-block;
+        // display: inline-block;
         &__current-group {
           font-size: 20px;
           color: #333333;
           padding-top: 35px;
-          text-align: center;
           font-size: 20px;
           margin-bottom: 15px;
         }
@@ -102,7 +101,7 @@ html {
           font-size: 12px;
           color: #999999;
           display: flex;
-          &__member{  
+          &__member{
           }
         }
       }
