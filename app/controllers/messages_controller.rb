@@ -10,7 +10,9 @@ class MessagesController < ApplicationController
     @message = @group.messages.new(message_params)
     if @message.save
       respond_to do |format|
+        # この中はHTMLリクエストの場合に呼ばれる
         format.html { redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'  }
+        # この中はJSONリクエストの場合に呼ばれる
         format.json
       end
     else
