@@ -81,15 +81,11 @@ html {
     width: calc(100vw - 299px);
     height: 100%;
     position: relative;
-    //background-color: blueviolet;;
-        
     .main-header{
       display: flex;
       padding: 0 40px;
       border-bottom: solid 1px #eeeeee;
-      //background-color: blueviolet;
       &__left-box {
-        // display: inline-block;
         &__current-group {
           font-size: 20px;
           color: #333333;
@@ -124,10 +120,8 @@ html {
     .messages{
       overflow: scroll;
       height:calc(100vh - 190px);
-      //background-color: blueviolet;
       padding: 46px 0 0 0 ;
       background-color: #fafafa;
-      // overflow: scroll;
       .message{
         width: 100%;
         padding: 0 40px;

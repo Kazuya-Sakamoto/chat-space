@@ -1,23 +1,22 @@
 $(function(){
   function buildmessage(message) {
     
-            var img = message.image ? `<img class="lower-message__image" src="${message.image}" alt="Dsc01746 2">`: '';
-            var html = `<div class="message" data-id="${message.id}">
-            <div class="upper-message">
-            <div class="upper-message__user-name">
-            ${message.user_name}
-            </div>
-            <div class="upper-message__date">
-            ${message.date}
-            </div>
-            </div>
-            <div class="lower-message">
-            <p class="lower-message__content">
-            ${message.content}
-            </p>
-            ${img}
-            </div>
-            </div>`
+    var img = message.image ? `<img class="lower-message__image" src="${message.image}" alt="Dsc01746 2">`: '';
+    var html = `<div class="message" data-id="${message.id}">
+                  <div class="upper-message">
+                    <div class="upper-message__user-name">
+                    ${message.user_name}
+                    </div>
+                    <div class="upper-message__date">
+                    ${message.date}
+                    </div>
+                    <div class="lower-message">
+                    <p class="lower-message__content">
+                    ${message.content}
+                    </p>
+                    ${img}
+                  </div>
+                </div>`
         return html;
 };
 
