@@ -78,18 +78,14 @@ html {
   }
  
   .chat-main{
-    width: calc(100vw - 300px);
+    width: calc(100vw - 299px);
     height: 100%;
     position: relative;
-    //background-color: blueviolet;;
-        
     .main-header{
       display: flex;
       padding: 0 40px;
       border-bottom: solid 1px #eeeeee;
-      //background-color: blueviolet;
       &__left-box {
-        // display: inline-block;
         &__current-group {
           font-size: 20px;
           color: #333333;
@@ -122,12 +118,10 @@ html {
     }
 
     .messages{
-
-      height: 100%;
-      //background-color: blueviolet;
+      overflow: scroll;
+      height:calc(100vh - 190px);
       padding: 46px 0 0 0 ;
       background-color: #fafafa;
-      overflow: scroll;
       .message{
         width: 100%;
         padding: 0 40px;
@@ -155,7 +149,7 @@ html {
       }
     }
       .form {
-        height: 7.8vh;
+        height: 5vh;
         width: calc(100% - 380px);
         background-color: #dddddd;
         position: fixed;
@@ -166,21 +160,21 @@ html {
         form{
           width: 100%;
           background-color: #dddddd;
-          height: 7vh;
+          height: 5vh;
           display: flex;
           position: relative;
 
           .form__message{
             width: 85%;
             background-color:#FFFFFF;
-            height: 7vh;
+            height: 5vh;
             
           }
           .form__mask{
             z-index: 1px;
             position: absolute;
             right: 165px;
-            margin-top:2vh;
+            margin-top:1.5vh;
 
             
             &__image{
