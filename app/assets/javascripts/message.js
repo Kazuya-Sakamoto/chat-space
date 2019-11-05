@@ -1,6 +1,5 @@
 $(function(){
   function buildmessage(message) {
-    
     var img = message.image ? `<img class="lower-message__image" src="${message.image}" alt="Dsc01746 2">`: '';
     var html = `<div class="message" data-id="${message.id}">
                   <div class="upper-message">
@@ -46,6 +45,7 @@ $(function(){
     })
   });
         var reloadMessages = (function() {
+          if (window.location.href.match(/\/groups\/\d+\/messages/)){
             last_message_id = $(".message:last").data("id");
             $.ajax({
             url: `api/messages`,
@@ -64,6 +64,7 @@ $(function(){
             .fail(function() {
                 alert("更新に失敗しました");
             });
+          }
         });
-           setInterval(reloadMessages, 5000);
+        setInterval(reloadMessages, 5000);
 });
