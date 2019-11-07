@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
   function buildmessage(message) {
     var img = message.image ? `<img class="lower-message__image" src="${message.image}" alt="Dsc01746 2">`: '';
     var html = `<div class="message" data-id="${message.id}">
