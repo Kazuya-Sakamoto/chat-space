@@ -12,6 +12,7 @@
 - MYSQL
 - Git
 - GitHub
+- Rspec
 
 ## Function
 - message mew
@@ -30,7 +31,8 @@
 - EC2
 - S3
 - 自動デプロイ
-
+- 単体テスト
+- 統合テスト
 
 # Chat_space DB設計　
 ## usersテーブル
