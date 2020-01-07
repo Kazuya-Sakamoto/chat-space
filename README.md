@@ -9,6 +9,7 @@
 - jQeary
 - ajax
 - AWS
+- capistrano
 - MYSQL
 - Git
 - GitHub
