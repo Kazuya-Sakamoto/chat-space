@@ -35,6 +35,21 @@
 - 単体テスト
 - 統合テスト
 
+# gem
+- gem 'pry-rails'
+- gem 'capistrano'
+- gem 'capistrano-rbenv'
+- gem 'capistrano-bundler'
+- gem 'capistrano-rails'
+- gem 'capistrano3-unicorn'
+- gem 'font-awesome-rails'
+- gem 'devise'
+- gem 'carrierwave'
+- gem 'fog-aws'
+- gem 'mini_magick'
+- gem 'haml-rails'
+- gem 'unicorn', '5.4.1'
+
 # Chat_space DB設計　
 ## usersテーブル
 |Column|Type|Options|
